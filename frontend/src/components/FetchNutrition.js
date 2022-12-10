@@ -1,6 +1,10 @@
 import React, { useEffect, useState, useCallback } from "react";
-import MenuItems from "./MenuNutritionItems";
-const FetchData = ({ query }) => {
+import Nutrition from "./Nutrition";
+import FetchData from "./FetchData";
+
+
+
+const FetchNutrition = ({ query }) => {
     const [nutrition, setNutrition] = useState({
         sugar_g: " ",
         fiber_g: " ",
@@ -15,14 +19,14 @@ const FetchData = ({ query }) => {
         protein_g: " ",
         carbohydrates_total_g: " ",
     });
-    const fetchData = useCallback(() => {
+    const fetchNutrition = useCallback(() => {
         const url =
             "https://calorieninjas.p.rapidapi.com/v1/nutrition?query=" + query;
         console.log(url);
         const options = {
             method: "GET",
             headers: {
-                "X-RapidAPI-Key": "59a1ed6959mshd3995aae4929d99p14e246jsnd8b7b3daa451",
+                "X-RapidAPI-Key": "7cb8ef39eamshd33244298f0bd8bp1b9a3djsn148fa3c9ce98",
                 "X-RapidAPI-Host": "calorieninjas.p.rapidapi.com",
             },
         };
@@ -30,18 +34,16 @@ const FetchData = ({ query }) => {
             .then((response) => response.json())
             .then((incomingData) => {
                 console.log(incomingData);
-                if (incomingData.items.length !== 0)
-                    setNutrition(incomingData.items[0]);
-            })
-            .catch((err) => console.error(err));
+                setNutrition(incomingData.items[0]);
+            });
     }, [query]);
     useEffect(() => {
-        fetchData();
-    }, [fetchData, query]);
+        fetchNutrition();
+    }, [fetchNutrition, query]);
     return (
         <div>
-            <MenuItems item={nutrition} />
+            <Nutrition item={nutrition} />
         </div>
     );
 };
-export default FetchData;
+export default FetchNutrition;

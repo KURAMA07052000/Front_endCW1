@@ -1,8 +1,8 @@
 import React from "react";
-const MenuNutritionItems = ({ item }) => {
+const Nutrition = ({ item }) => {
     return (
         <div>
-            <h3>Food : {item.name}</h3>
+        
             <ul style={{ listStyle: "none" }}>
                 <li>Serving size:{item.serving_size_g} g</li>
                 <li>Calories per serving :{item.calories}</li>
@@ -19,4 +19,4 @@ const MenuNutritionItems = ({ item }) => {
         </div>
     );
 };
-export default MenuNutritionItems;
+export default Nutrition;
