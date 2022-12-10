@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
 import SubmitOrder from "./SubmitOrder";
+import './card.css';
+
 
 const MenuItems = ({ items }) => {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -12,28 +14,23 @@ const MenuItems = ({ items }) => {
   };
   return (
     <>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-2 submenu">
-            <h2>Menu</h2>
-            <ul>
-              {items.map((item) => (
-                <li key={item.id} onClick={(e) => handleClick(e, item.name)}>
-                  {item.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <OrderContext.Provider value={[selectedItems, setSelectedItems]}>
-            <div className="col-4">
-              <OrderSummary />
-            </div>
-            <div className="col-6">
-              <SubmitOrder />
-            </div>
-          </OrderContext.Provider>
-        </div>
+    <h2>Recipes</h2>
+   
+    <div class="cards">
+    {items.map((item) => (
+    <div class="card card-3" key={item.id} onClick={(e) => handleClick(e, item.name)}>
+      
+      <h2 class="card__title">{item.name}</h2>
+      <div class="card_description">
+      {item.description}
       </div>
+      <p class="card__apply">
+        <a class="card__link" href="#">Add to Cart <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+     ))}
+    
+    </div>
     </>
   );
 };

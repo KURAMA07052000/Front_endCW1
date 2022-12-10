@@ -30,5 +30,7 @@ const FetchData = () => {
     <MenuItems items={foods} /> 
     </div>
   );
+
+  
 };
 export default FetchData;
