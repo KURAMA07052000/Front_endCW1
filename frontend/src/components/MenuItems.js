@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FetchNutrition from "./FetchNutrition";
+import FetchData from "./FetchNutrition";
 import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
 import SubmitOrder from "./SubmitOrder";
@@ -33,7 +33,7 @@ const MenuItems = ({ items }) => {
 
                   <Accordion.Header key={item.id}>Nutrition Information:</Accordion.Header>
                   <Accordion.Body>
-                    <p><FetchNutrition query={item.name} /></p>
+                    <p><FetchData query={item.name} /></p>
                   </Accordion.Body>
 
 
