@@ -4,6 +4,7 @@ import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
 import SubmitOrder from "./SubmitOrder";
 import './card.css';
+import Accordion from "react-bootstrap/Accordion";
 
 
 
@@ -21,24 +22,35 @@ const MenuItems = ({ items }) => {
     <>
       <h2>Recipes</h2>
 
+      <Accordion>
+        <div className="cards">
+          {items.map((item, index) => (
+            <Accordion.Item eventKey={index} key={index} >
+              <div className="card card-3" key={item.id} >
 
-      <div className="cards">
-        {items.map((item) => (
-          <div className="card card-3" key={item.id} onClick={(e) => handleClick(e, item.name)}>
+                <h2 className="card__title">{item.name}</h2>
+                <div className="card_description">
 
-            <h2 className="card__title">{item.name}</h2>
-            <div className="card_description">
-              
-            <FetchNutrition query={item.name} />
-            </div>
-            <p className="card__apply">
-              <a className="card__link" href="#">Add to Cart <i className="fas fa-arrow-right"></i></a>
-            </p>
-          </div>
-        ))}
+                  <Accordion.Header key={item.id}>Nutrition Information:</Accordion.Header>
+                  <Accordion.Body>
+                    <p><FetchNutrition query={item.name} /></p>
+                  </Accordion.Body>
 
-      </div>
 
+                </div>
+                <p className="card__apply">
+                  <a className="card__link"  onClick={(e) => handleClick(e, item)}>Add to Cart <i className="fas fa-arrow-right"></i></a>
+                </p>
+              </div>
+            </Accordion.Item>
+          ))}
+
+        </div>
+      </Accordion>
+      <br></br>
+      <div><OrderContext.Provider value={[selectedItems, setSelectedItems]}>
+        <div><OrderSummary /></div>
+      </OrderContext.Provider></div>
     </>
   );
 };

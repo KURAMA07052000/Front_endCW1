@@ -1,6 +1,10 @@
 import React from "react";
+
+
+
 const Nutrition = ({ item }) => {
     return (
+        
         <div>
         
             <ul style={{ listStyle: "none" }}>
@@ -17,6 +21,7 @@ const Nutrition = ({ item }) => {
                 <li>Cholesterol per serving:{item.cholesterol_mg}mg</li>
             </ul>
         </div>
+        
     );
 };
 export default Nutrition;
