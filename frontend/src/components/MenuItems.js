@@ -38,6 +38,7 @@ const MenuItems = ({ items }) => {
 
 
                 </div>
+                <br></br>
                 <p className="card__apply">
                   <a className="card__link"  onClick={(e) => handleClick(e, item)}>Add to Cart <i className="fas fa-arrow-right"></i></a>
                 </p>
