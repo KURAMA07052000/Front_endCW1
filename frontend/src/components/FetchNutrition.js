@@ -32,9 +32,9 @@ const FetchData = ({ query }) => {
       .then((response) => response.json())
       .then((incomingData) => {
         console.log(incomingData);
-        //if (incomingData.items.length !== 0) {
-        setNutrition(incomingData.items[0]);
-      //  }
+        if (incomingData.items.length !== 0) {
+          setNutrition(incomingData.items[0]);
+        }
       });
   }, [query]);
 

@@ -1,15 +1,17 @@
 
-import React, { useState } from "react"; // Importing the useState hook
+import React, { useState } from "react";
 import MenuItems from "./MenuItems";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 function Search({ details }) {
     const [searchField, setSearchField] = useState("");
 
-    // add a function to loop through the list of menu items, check the name of each item and
-    //return a list of items whose name includes the current state of the search field
+    console.log(details);
     const filtered = details.filter((entry) => {
 
+        console.log(entry);
         return entry.name.toLowerCase().includes(searchField.toLowerCase());
 
     });
@@ -22,32 +24,30 @@ function Search({ details }) {
 
 
     const snackList = availableList.filter((entry) => {
-        if (entry.category === "snack") { // if not using the availableList then add && entry.available==="yes"
+        if (entry.category === "snack") {
             return entry;
         }
 
     });
 
     const mainList = availableList.filter((entry) => {
-        if (entry.category === "main") { // if not using the availableList then add && entry.available==="yes"
+        if (entry.category === "main") {
             return entry;
         }
 
     });
     const sideList = availableList.filter((entry) => {
-        if (entry.category === "side") { // if not using the availableList then add && entry.available==="yes"
+        if (entry.category === "side") {
             return entry;
         }
 
     });
     const drinksList = availableList.filter((entry) => {
-        if (entry.category === "drinks") { // if not using the availableList then add && entry.available==="yes"
+        if (entry.category === "drinks") {
             return entry;
         }
 
     });
-
-
 
 
     return (
@@ -58,30 +58,15 @@ function Search({ details }) {
                     type="text"
                     placeholder="Search ..."
                     className="form-control"
-                    onChange={(e) => setSearchField(e.target.value)}  //add an event handler to update the state when the text input changes
+                    onChange={(e) => setSearchField(e.target.value)}
+                    style={{display: "block", margin: "auto", width: "60%"}}
                 />
+
             </div>
             <br></br>
-            <div>
-                <h2>Snacks</h2>
-                <MenuItems foodList={snackList} />
-
-            </div>
-            <div>
-                <h2>Main</h2>
-                <MenuItems foodList={mainList} />
-
-            </div>
-            <div>
-                <h2>Side</h2>
-                <MenuItems foodList={sideList} />
-
-            </div>
-            <div>
-                <h2>Drinks</h2>
-                <MenuItems foodList={drinksList} />
-
-            </div>
+            <MenuItems items={availableList} />
+            <br></br>
+            
         </div>
     );
 }

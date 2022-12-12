@@ -20,7 +20,7 @@ const MenuItems = ({ items }) => {
 
   return (
     <>
-      <h2>Recipes</h2>
+      
 
       <Accordion>
         <div className="cards">

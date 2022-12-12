@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useCallback } from "react";
 import MenuItems from "./MenuItems";
+import Search from "./Search";
 
 
 const FetchData = () => {
   const [foods, setFoods] = useState([{
     id: "",
-    name: "",
+    name: "apple pie",
     price: "",
     category: "",
     available: "",
@@ -28,7 +29,10 @@ const FetchData = () => {
 
   return (
     <div>
-      <MenuItems items={foods} />
+      <h2>Recipes</h2>
+      <br></br>
+     <Search details={foods} />
+      {/* <MenuItems items={foods} /> */}
       
     </div>
   );
