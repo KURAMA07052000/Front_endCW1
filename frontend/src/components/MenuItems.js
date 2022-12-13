@@ -19,28 +19,42 @@ const MenuItems = ({ items }) => {
 
   return (
     <>
-      
+
 
       <Accordion>
         <div className="cards">
           {items.map((item, index) => (
-            <Accordion.Item eventKey={index} key={index} style={{border: "none"}}>
+            <Accordion.Item eventKey={index} key={index} style={{ border: "none" }}>
               <div className="card card-3" key={item.id} >
 
                 <h2 className="card__title">{item.name}</h2>
+                <br></br>
+                <Accordion.Header key={item.id}>Ingredients:</Accordion.Header>
+                  <Accordion.Body>
+                    <p style={{ textAlign: "center" }}>{item.ingredients}</p>
+                  </Accordion.Body>
+                
+                <br></br>
                 <div className="card_description">
 
-                  <Accordion.Header key={item.id}>Nutrition Information:</Accordion.Header>
+                  <Accordion.Header key={item.id}>Nutritional Information:</Accordion.Header>
                   <Accordion.Body>
                     <p><FetchData query={item.name} /></p>
                   </Accordion.Body>
 
 
                 </div>
-                {item.category}
+                <div className="row">
+                  <div className="col" style={{ justifyContent: "center" }}>
+                    {item.category}
+                  </div>
+                  <div className="col">
+                    <p style={{ color: "white", float: "right", fontStyle: "oblique" }}>£{item.price}</p>
+                  </div>
+                </div>
                 <br></br>
                 <p className="card__apply">
-                  <a className="card__link"  onClick={(e) => handleClick(e, item)}>Add to Cart <i className="fas fa-arrow-right"></i></a>
+                  <a className="card__link" onClick={(e) => handleClick(e, item)}>Add to Cart <i className="fas fa-arrow-right"></i></a>
                 </p>
               </div>
             </Accordion.Item>

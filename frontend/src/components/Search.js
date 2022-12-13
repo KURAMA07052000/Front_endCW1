@@ -108,8 +108,8 @@ function Search({ details }) {
 
             <br></br>
 
-            <div class="List"  style={{margin: "auto", width: "60%", paddingLeft: "130px"}} >
-                <div className="row">
+            <div className="List"  /* style={{margin: "auto", width: "60%", paddingLeft: "130px"}} */ >
+                <div className="row" >
                     
                     <div className="col">
                         <Checkbox

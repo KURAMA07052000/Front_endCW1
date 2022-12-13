@@ -19,6 +19,7 @@ class Menu {
       price: "2.50",
       category: "cake",
       available: "no",
+      ingredients: "230ml vegetable oil , 100g natural yogurt , 4 large eggs , 1 1/2 tsp vanilla extract , 1/2 orange zested , 265g self-raising flour , 335g light muscovado sugar , 2½ tsp ground cinnamon , ¼ fresh nutmeg , 265g carrots , 100g walnuts",
     });
     this.menu.insert({
       id: "2",
@@ -27,6 +28,7 @@ class Menu {
       price: "2.50",
       category: "snack",
       available: "no",
+      ingredients: "2 slices of bread , 2 sices of ham , 1 tsp mayonaise , 2 slices chedder chesse, 1 leaf of lettuce",
     });
     this.menu.insert({
       id: "3",
@@ -35,6 +37,7 @@ class Menu {
       price: "3.50",
       category: "side",
       available: "yes",
+      ingredients: "1 tsp cumin seeds , 2 small sweet potatoes , 350 g broccoli , olive oil , 25 g cashew nuts , 25 g mixed pumpkin, sunflower and sesame seeds , 250 g vac-packed beetroot , 2 tbsp balsamic vinegar , 300 g quinoa , 30g fresh mint , 1 lemon , 1 ripe avocado , 6 tbsp natural yoghurt , 1 punnet of cress",
     });
     this.menu.insert({
       id: "4",
@@ -43,6 +46,7 @@ class Menu {
       price: "2.00",
       category: "drinks",
       available: "yes",
+      ingredients: "2 tbsp hot chocolate , 1 tsp sugar , 1 marshmellow , 2/3 cups hot water , 1/3 cups milk",
     });
     this.menu.insert({
       id: "5",
@@ -51,6 +55,7 @@ class Menu {
       price: "2.50",
       category: "cake",
       available: "yes",
+      ingredients: "4 large eggs , 1 1/2 tsp vanilla extract , 1/2 orange zested , 265g self-raising flour , 200g golden caster sugar , 200g unsalted butter , 2 tbsp cocoa powder , 1 tsp baking powder , 2 tbsp milk",
     });
     this.menu.insert({
       id: "6",
@@ -59,6 +64,7 @@ class Menu {
       price: "2.00",
       category: "snack",
       available: "yes",
+      ingredients: "2 tsp cumin seeds , pinch chilli flakes , 2 tbsp olive oil , 600g carrots , 140g split red lentils , 1l hot vegetable stock , 125ml milk",
     });
     this.menu.insert({
       id: "7",
@@ -67,6 +73,7 @@ class Menu {
       price: "5.00",
       category: "main",
       available: "yes",
+      ingredients: "2 tbsp olive oil , 1 small onion , 1 fat garlic clove , 2 x 400g cans chopped tomatoes , 3 tbsp tomato purée , 1 bay leaf , 2 tbsp dried oregano , 2 tsp brown sugar , 1 small bunch basil",
     });
     this.menu.insert({
       id: "8",
@@ -75,6 +82,7 @@ class Menu {
       price: "4.50",
       category: "main",
       available: "yes",
+      ingredients: "4 baking potatoes , ½ tbsp sunflower oil",
     });
     this.menu.insert({
       id: "9",
@@ -83,6 +91,7 @@ class Menu {
       price: "3.50",
       category: "pudding",
       available: "yes",
+      ingredients: "1kg Bramley apples , 140g golden caster sugar , ½ tsp cinnamon , 3 tbsp flour , 225g butter, room temperature , 50g golden caster sugar , 2 eggs , 350g plain flour , softly whipped cream",
     });
     this.menu.insert({
       id: "10",
@@ -91,6 +100,7 @@ class Menu {
       price: "3.00",
       category: "pudding",
       available: "yes",
+      ingredients: "110g digestive biscuits , 50g butter , 25g light brown soft sugar , 350g mascarpone , 75g caster sugar , 1 lemon , 2-3 lemons",
     });
     this.menu.insert({
       id: "11",
@@ -99,6 +109,7 @@ class Menu {
       price: "6.50",
       category: "main",
       available: "yes",
+      ingredients: "50g plain flour , 50g cornflour , 1 tsp baking powder , turmeric , 75ml lager beer , 75ml sparkling water , 1 litre sunflower oil , 400g fillet sustainable cod , 750g potatoes , 2 tbsp plain flour , 2 tbsp sunflower oil",
     });
     this.menu.insert({
       id: "12",
@@ -107,6 +118,7 @@ class Menu {
       price: "6.50",
       category: "main",
       available: "yes",
+      ingredients: "",
     });
     this.menu.insert({
       id: "13",
@@ -115,6 +127,7 @@ class Menu {
       price: "2.50",
       category: "pudding",
       available: "yes",
+      ingredients: "200g dark chocolate , 500ml double cream , 340g can sweetened condensed milk , 1 tsp vanilla extract , 3 tbsp organic cocoa powder , 50g milk chocolate chips , sea salt flakes",
     });
     this.menu.insert({
       id: "14",
@@ -123,6 +136,7 @@ class Menu {
       price: "1.50",
       category: "drinks",
       available: "yes",
+      ingredients: "3 tbsp instant coffee , 2 tbsp sugar , 400-500ml milk",
     });
     this.menu.insert({
       id: "15",
@@ -131,6 +145,7 @@ class Menu {
       price: "1",
       category: "drinks",
       available: "yes",
+      ingredients: "3 heaped tsp ground turmeric , 1 tbsp fresh grated ginger , 1 small orange , honey",
     });
     this.menu.insert({
       id: "16",
@@ -139,6 +154,7 @@ class Menu {
       price: "5.50",
       category: "main",
       available: "yes",
+      ingredients: "1 tbsp olive oil , 1 large onion , 2 garlic cloves , 1 tsp chilli powder , 400g can chopped tomatoes , 300g short pasta such as fusilli or farfalle",
     });
     this.menu.insert({
       id: "17",
@@ -147,6 +163,7 @@ class Menu {
       price: "3",
       category: "side",
       available: "yes",
+      ingredients: "750g Desirée potato , groundnut oil , sea salt and freshly ground black pepper",
     });
     this.menu.insert({
       id: "18",
@@ -155,6 +172,7 @@ class Menu {
       price: "1.5",
       category: "drinks",
       available: "yes",
+      ingredients: "carbonator",
     });
   }
 
