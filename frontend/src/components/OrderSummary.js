@@ -20,7 +20,7 @@ export default function OrderSummary() {
       <Accordion>
         <div className="cards">
           {order.map((item, index) => (
-            <Accordion.Item eventKey={index} key={index} >
+            <Accordion.Item eventKey={index} key={index} style={{border: "none"}} >
               <div className="card card-2" key={item.id} >
 
                 <h2 className="card__title">{item.name}</h2>

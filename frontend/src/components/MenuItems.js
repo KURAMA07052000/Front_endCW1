@@ -3,9 +3,8 @@ import FetchData from "./FetchNutrition";
 import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
 import SubmitOrder from "./SubmitOrder";
-import './card.css';
 import Accordion from "react-bootstrap/Accordion";
-
+import './card.css';
 
 
 
@@ -25,7 +24,7 @@ const MenuItems = ({ items }) => {
       <Accordion>
         <div className="cards">
           {items.map((item, index) => (
-            <Accordion.Item eventKey={index} key={index} >
+            <Accordion.Item eventKey={index} key={index} style={{border: "none"}}>
               <div className="card card-3" key={item.id} >
 
                 <h2 className="card__title">{item.name}</h2>
@@ -38,6 +37,7 @@ const MenuItems = ({ items }) => {
 
 
                 </div>
+                {item.category}
                 <br></br>
                 <p className="card__apply">
                   <a className="card__link"  onClick={(e) => handleClick(e, item)}>Add to Cart <i className="fas fa-arrow-right"></i></a>
