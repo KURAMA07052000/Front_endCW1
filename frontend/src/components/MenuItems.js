@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import FetchData from "./FetchNutrition";
 import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
-import SubmitOrder from "./SubmitOrder";
 import Accordion from "react-bootstrap/Accordion";
 import './card.css';
 

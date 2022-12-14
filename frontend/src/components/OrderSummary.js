@@ -25,7 +25,8 @@ export default function OrderSummary() {
 
                 <h2 className="card__title">{item.name}</h2>
                 <div className="card_description">
-
+                <br></br>
+                <p style={{ textAlign: "center", color: "white" }}>{item.ingredients}</p>
                 </div>
                 <p className="card__delete">
                   <a className="card__link" onClick={(e) => removeItem(e, item)}>Delete <i className="fas fa-arrow-right"></i></a>

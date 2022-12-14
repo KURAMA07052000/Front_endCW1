@@ -17,7 +17,7 @@ function Search({ details }) {
     const filtered = details.filter((entry) => {
 
         console.log(entry);
-        return entry.name.toLowerCase().includes(searchField.toLowerCase());
+        return entry.name.toLowerCase().includes(searchField.toLowerCase()) || entry.ingredients.toLowerCase().includes(searchField.toLowerCase());
 
     });
 
@@ -99,7 +99,7 @@ function Search({ details }) {
             <div>
                 <input
                     type="text"
-                    placeholder="Search ..."
+                    placeholder="Search ingredients or dish name ..."
                     className="form-control"
                     onChange={(e) => setSearchField(e.target.value)}
                     style={{ display: "block", margin: "auto", width: "60%" }}
