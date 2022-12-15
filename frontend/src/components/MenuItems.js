@@ -44,6 +44,7 @@ const MenuItems = ({ items }) => {
 
                 <h2 className="card__title">{item.name}</h2>
                 <br></br>
+               
                 <Accordion.Header key={item.id}>Ingredients:</Accordion.Header>
                 <Accordion.Body>
                   <p style={{ textAlign: "center" }}>{item.ingredients}</p>
@@ -59,9 +60,16 @@ const MenuItems = ({ items }) => {
 
 
                 </div>
+                <br></br>
+                <div className="card_recipe">
+                <Accordion.Header key={item.id}>Recipe:</Accordion.Header>
+                  <Accordion.Body>
+                    <p style={{ whiteSpace: 'pre-wrap', color: 'ivory' }}> {item.recipe}</p>
+                  </Accordion.Body>
+                </div>
                 <div className="row">
                   <div className="col" style={{ justifyContent: "center" }}>
-                    {item.category}
+                   <p style={{fontWeight: "bold"}}> {item.category}</p>
                   </div>
                   <div className="col">
                     <p style={{ color: "white", float: "right", fontStyle: "oblique" }}>£{item.price}</p>

@@ -28,6 +28,13 @@ export default function OrderSummary() {
                 <br></br>
                 <p style={{ textAlign: "center", color: "white" }}>{item.ingredients}</p>
                 </div>
+                <br></br>
+                <div className="card_recipe">
+                <Accordion.Header key={item.id}>Recipe:</Accordion.Header>
+                  <Accordion.Body>
+                    <p style={{ whiteSpace: 'pre-wrap', color: 'white' }}> {item.recipe}</p>
+                  </Accordion.Body>
+                </div>
                 <p className="card__delete">
                   <a className="card__link" onClick={(e) => removeItem(e, item)}>Delete <i className="fas fa-arrow-right"></i></a>
                 </p>

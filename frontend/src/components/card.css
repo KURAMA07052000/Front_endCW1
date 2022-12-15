@@ -108,6 +108,10 @@ h2 {
     grid-row: 2/4;
 }
 
+.card_recipe {
+    grid-row: 3/4;
+}
+
 .card__apply {
     grid-row: 5/5;
     align-self: center;
@@ -153,6 +157,7 @@ h2 {
 .card-3 {
     background: radial-gradient(#f73b7d, #f03847);
     border: none;
+    /* width: 1000px; */
 }
 
 .card-4 {

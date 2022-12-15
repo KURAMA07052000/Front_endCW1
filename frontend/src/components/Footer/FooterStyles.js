@@ -42,7 +42,7 @@ export const Row = styled.div`
 `;
 
 export const FooterLink = styled.a`
-  color: #fff;
+  color: ivory;
   margin-bottom: 20px;
   font-size: 18px;
   text-decoration: none;
