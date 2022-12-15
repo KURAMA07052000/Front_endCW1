@@ -1,6 +1,5 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import '../about.css';
 
 export const AboutUs = () => {
@@ -47,7 +46,10 @@ export const AboutUs = () => {
                 </div>
 
             </section>
+         
+
             <a class="top" href="#">Back to Top ↑</a>
+
 
         </>
     )

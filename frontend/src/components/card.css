@@ -194,7 +194,15 @@ h2 {
     float: right;
     margin-right: 4%; 
     position: sticky;
-    bottom: 20px;
-    --offset: 100px;
-    margin-top: calc(100vh + var(--offset));
+    bottom: 30px;
+    --offset: 30px;
+    margin-top: calc(30vh + var(--offset));
 }
+
+.top :hover{
+    color: white;
+    background-color: #000000;
+    transition: all 2s;
+}
+/* end of button */
+

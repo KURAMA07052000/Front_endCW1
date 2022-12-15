@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FetchData from "./FetchNutrition";
 import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
@@ -8,13 +8,29 @@ import './card.css';
 
 
 const MenuItems = ({ items }) => {
-  const [selectedItems, setSelectedItems] = useState([]);
+
+  let stored;
+
+  if (localStorage.getItem('item') !== null) {
+    stored = JSON.parse(localStorage.getItem('item'))
+    console.log(stored)
+  }
+  else {
+    stored = []
+  }
+  const [selectedItems, setSelectedItems] = useState(stored);
   const handleClick = (e, selectedItem) => {
     let newState = [...selectedItems, selectedItem];
     setSelectedItems(newState);
     console.log(selectedItems);
   };
 
+  useEffect(() => {
+    if (selectedItems !== 0) {
+      localStorage.setItem('item', JSON.stringify(selectedItems));
+    }
+
+  }, { selectedItems });
 
   return (
     <>
@@ -23,16 +39,16 @@ const MenuItems = ({ items }) => {
       <Accordion>
         <div className="cards">
           {items.map((item, index) => (
-            <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background:"none" }}>
+            <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background: "none" }}>
               <div className="card card-3" key={item.id} >
 
                 <h2 className="card__title">{item.name}</h2>
                 <br></br>
                 <Accordion.Header key={item.id}>Ingredients:</Accordion.Header>
-                  <Accordion.Body>
-                    <p style={{ textAlign: "center" }}>{item.ingredients}</p>
-                  </Accordion.Body>
-                
+                <Accordion.Body>
+                  <p style={{ textAlign: "center" }}>{item.ingredients}</p>
+                </Accordion.Body>
+
                 <br></br>
                 <div className="card_description">
 
@@ -61,7 +77,7 @@ const MenuItems = ({ items }) => {
 
         </div>
       </Accordion>
-      
+
       <br></br>
       <div><OrderContext.Provider value={[selectedItems, setSelectedItems]}>
         <section ><div><OrderSummary /></div></section>
