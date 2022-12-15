@@ -23,7 +23,7 @@ const MenuItems = ({ items }) => {
       <Accordion>
         <div className="cards">
           {items.map((item, index) => (
-            <Accordion.Item eventKey={index} key={index} style={{ border: "none" }}>
+            <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background:"none" }}>
               <div className="card card-3" key={item.id} >
 
                 <h2 className="card__title">{item.name}</h2>
@@ -61,9 +61,10 @@ const MenuItems = ({ items }) => {
 
         </div>
       </Accordion>
+      
       <br></br>
       <div><OrderContext.Provider value={[selectedItems, setSelectedItems]}>
-        <div><OrderSummary /></div>
+        <section ><div><OrderSummary /></div></section>
       </OrderContext.Provider></div>
     </>
   );

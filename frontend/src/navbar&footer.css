@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+
+body{
+    background-color: #fef2f2;
+    font-family: 'Poppins', sans-serif;
+}
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    /*background-color: #f58953;*/
+    background: radial-gradient(#f73b7d, #f03847);
+    /* background-image: linear-gradient(315deg, #f03847 0%, #f03847 74%); */
+    font-family: 'Sansita', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    z-index: 3;
+    border-bottom: #000000;
+    border-bottom-style: solid;
+}
+
+.navcontent {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    z-index: 3;
+}
+
+.navcontent li {
+    list-style: none;
+    
+}
+
+.navcontent a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.buttonnav {
+    border-radius: 20em;
+    background-color: black;
+    border: none;
+    padding: 5px;
+    width: 300%;
+    letter-spacing: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: rgb(0, 0, 0);
+    height: 1px;
+}
+
+nav.fill ul li a {
+    transition: all 2s;
+}
+
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover {
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+
+@media screen and (max-width:1024px) {
+    .navcontent {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:678px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+   /*  nav {
+        overflow: auto;
+    } */
+
+    .navcontent {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #f7b42c;
+        background-image: linear-gradient(315deg, #000000 0%, #df306a 74%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .navcontent li {
+        opacity: 100;
+
+    }
+
+    /* .burger {
+        display: block;
+    } */
+
+   /*  .buttonnav {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .buttonadmin1 {
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    } */
+}
+
+/* .nav-active {
+    transform: translateX(0%);
+}
+ */
+#map {
+    width: 100%
+}
+
+/* end of navbar */

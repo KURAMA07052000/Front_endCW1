@@ -15,7 +15,7 @@ export default function OrderSummary() {
 
   return (
     <>
-      <h2>Your Order</h2>
+      <h2 id="orderSummary">Your Order</h2>
 
       <Accordion>
         <div className="cards">
@@ -37,6 +37,7 @@ export default function OrderSummary() {
 
         </div>
       </Accordion>
+      
     </>
   );
 }

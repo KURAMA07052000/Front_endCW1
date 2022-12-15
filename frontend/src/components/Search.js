@@ -102,7 +102,7 @@ function Search({ details }) {
                     placeholder="Search ingredients or dish name ..."
                     className="form-control"
                     onChange={(e) => setSearchField(e.target.value)}
-                    style={{ display: "block", margin: "auto", width: "60%" }}
+                    style={{ display: "block", margin: "auto", width: "60%", borderStyle: "solid"}}
                 />
             </div>
 

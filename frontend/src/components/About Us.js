@@ -6,7 +6,7 @@ import '../about.css';
 export const AboutUs = () => {
     return (
         <>
-            <h2>ABOUT US</h2>
+            <h2 id="AboutUs">ABOUT US</h2>
             <section id="about">
                 <div className="about-1">
 
@@ -47,6 +47,7 @@ export const AboutUs = () => {
                 </div>
 
             </section>
+            <a class="top" href="#">Back to Top ↑</a>
 
         </>
     )
