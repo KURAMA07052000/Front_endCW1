@@ -1,70 +1,65 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Firstly clone the repository as follows
 
-## Available Scripts
+ git init
 
-In the project directory, you can run:
+ git clone https://github.com/KURAMA07052000/Front_endCW1.git
 
-### `npm start`
+ cd FRONT_ENDWEBCW1
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-------------------------------HOW TO RUN-----------------------------------------
+1. To start the application follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ cd backend
 
-### `npm test`
+ node index
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+2. Then go to the frontend by opening a new terminal using '+'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ cd frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ npm i
 
-### `npm run eject`
+ npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Now the website should be fully loaded on local host port 3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. On a new chromium browser(Chrome, edge, firefox et....) enter http://localhost:3000/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-------------------------------ADDED FUNCTIONALITY-----------------------------------------
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. The user can effectively bookmark recipes and it will save it localy on client-side. Thne user can also delete these items and the changes will be reflected localy as well.
 
-## Learn More
+2. There is an effective navigation system that allows user to reach parts within the page and a button by the right to send them back to the top.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. The program sucessfully reads data from the back-end and can use the name to query the API for further data. This is reflected in the user cards system
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. The rating system passes an array that is averaged on client side to show the mean of all th values within the array.
 
-### Code Splitting
+6. The user can use checkboxes to filter the menu out in regards to category such as snack, lunch, drin and so on.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+7. the user can use the searchbar at the top to either filter results by name or ingredients
 
-### Analyzing the Bundle Size
+8. The website utilises responsive design to all kinds of devices
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+-------------------------------CHANGES TO DESIGN DOCUMENT-----------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. I changed the length and format of the rendered cards because during the process of program I found it to use space better. They are smaller and use the 'Append' feature to load individual data to the user which is better for user interaction.
 
-### Advanced Configuration
+2. I used different color for my website dude to experimentation and research. I found that the color scheme chosen is more attractive to users. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. I changed the search to also include ingredients and the filter is now represented as a series of checkboxes instead. This was because i found it simpler to give the user a straightforward option and filter on category.
 
-### Deployment
+4. I added a footer as it is more fitting for a website to have one
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+----------------------------------------END--------------------------------------------------
+ 
+Signed: 
+Kevin Chika Urama
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Matriculation Number:
+S1918573

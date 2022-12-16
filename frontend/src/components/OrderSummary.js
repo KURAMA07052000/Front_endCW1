@@ -8,7 +8,8 @@ export default function OrderSummary() {
   const [order, setOrder] = useContext(OrderContext);
   const removeItem = (e, item) => {
     let updatedOrder = order.filter((element) => {
-      localStorage.removeItem('item', JSON.stringify(element))
+      //removes the item from local storage so that on refresh the data will not remain
+      /* localStorage.removeItem('item', JSON.stringify(element)) */
       return element !== item;
     });
     setOrder(updatedOrder);

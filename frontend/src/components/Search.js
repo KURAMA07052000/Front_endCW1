@@ -17,6 +17,7 @@ function Search({ details }) {
     const filtered = details.filter((entry) => {
 
         console.log(entry);
+        // filters by either name or ingredients
         return entry.name.toLowerCase().includes(searchField.toLowerCase()) || entry.ingredients.toLowerCase().includes(searchField.toLowerCase());
 
     });
@@ -29,7 +30,7 @@ function Search({ details }) {
     });
 
 
-// allert that checkboxes have been checked
+    // allert that checkboxes have been checked
     const handleChangeOne = () => {
         setCheckedOne(!checkedOne);
 
@@ -82,7 +83,7 @@ function Search({ details }) {
 
     });
 
-//checkbox to be used for filtration
+    //checkbox to be used for filtration
 
     const Checkbox = ({ label, value, onChange }) => {
         return (
@@ -104,7 +105,7 @@ function Search({ details }) {
                     placeholder="Search ingredients or dish name ..."
                     className="form-control"
                     onChange={(e) => setSearchField(e.target.value)}
-                    style={{ display: "block", margin: "auto", width: "60%", borderStyle: "solid"}}
+                    style={{ display: "block", margin: "auto", width: "60%", borderStyle: "solid" }}
                 />
             </div>
 
@@ -112,7 +113,7 @@ function Search({ details }) {
 
             <div className="List"  /* style={{margin: "auto", width: "60%", paddingLeft: "130px"}} */ >
                 <div className="row" >
-                     {/* displays of checboxes  */}
+                    {/* displays of checboxes  */}
                     <div className="col">
                         <Checkbox
                             label="Drink"
@@ -120,7 +121,7 @@ function Search({ details }) {
                             onChange={handleChangeOne}
                         />
                     </div>
-                    
+
                     <div className="col">
                         <Checkbox
                             label="Side"
@@ -128,7 +129,7 @@ function Search({ details }) {
                             onChange={handleChangeTwo}
                         />
                     </div>
-                    
+
                     <div className="col">
                         <Checkbox
                             label="Snack"
@@ -136,7 +137,7 @@ function Search({ details }) {
                             onChange={handleChangeThree}
                         />
                     </div>
-                    
+
                     <div className="col">
                         <Checkbox
                             label="Main"

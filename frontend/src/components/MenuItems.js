@@ -36,6 +36,7 @@ const MenuItems = ({ items }) => {
 
   }, { selectedItems });
 
+  // calculates the average(mean)
   const mean = (x) => {
     let sum = 0;
     let count = 0
@@ -87,7 +88,7 @@ const MenuItems = ({ items }) => {
                   </div>
                   <div className="col">
                     {/* <Typography component="legend">Read only</Typography> */}
-                    <Rating name="read-only" value={mean(item.rating)} style={{ float: "right" }} readOnly />
+                    <Rating name="read-only" value={mean(item.rating)} style={{ float: "right" }} readOnly /> {/* Displays the average of a rating */}
                     {/* <Rating
                       name="simple-controlled"
                       value={mean(item.rating)}
