@@ -6,6 +6,7 @@ import logo from "../images/logo.png"
 function Navbar() {
   return (
     <>
+   {/*  Navigation system using id to scroll to particular section of the page */}
       <section style={{ marginBottom: "3%" }}>
         <nav class="fill">
           <div class="logo">

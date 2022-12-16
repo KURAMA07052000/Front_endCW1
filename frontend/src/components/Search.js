@@ -21,6 +21,7 @@ function Search({ details }) {
 
     });
 
+    // filters out available items from unavailabke items
 
     const availableList = filtered.filter((entry) => {
 
@@ -28,7 +29,7 @@ function Search({ details }) {
     });
 
 
-
+// allert that checkboxes have been checked
     const handleChangeOne = () => {
         setCheckedOne(!checkedOne);
 
@@ -46,6 +47,7 @@ function Search({ details }) {
         setCheckedFour(!checkedFour);
     };
 
+    // if else statement to select items by category
     const checkBoxFiltered = availableList.filter((entry) => {
         if (checkedOne === true) {
             if (entry.category === "drinks") {
@@ -80,7 +82,7 @@ function Search({ details }) {
 
     });
 
-
+//checkbox to be used for filtration
 
     const Checkbox = ({ label, value, onChange }) => {
         return (
@@ -110,7 +112,7 @@ function Search({ details }) {
 
             <div className="List"  /* style={{margin: "auto", width: "60%", paddingLeft: "130px"}} */ >
                 <div className="row" >
-                    
+                     {/* displays of checboxes  */}
                     <div className="col">
                         <Checkbox
                             label="Drink"

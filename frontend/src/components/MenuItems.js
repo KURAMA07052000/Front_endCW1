@@ -3,6 +3,8 @@ import FetchData from "./FetchNutrition";
 import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
 import Accordion from "react-bootstrap/Accordion";
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
 import './card.css';
 
 
@@ -11,6 +13,7 @@ const MenuItems = ({ items }) => {
 
   let stored;
 
+  //Allows for the storage of local data
   if (localStorage.getItem('item') !== null) {
     stored = JSON.parse(localStorage.getItem('item'))
     console.log(stored)
@@ -25,12 +28,23 @@ const MenuItems = ({ items }) => {
     console.log(selectedItems);
   };
 
+  // save selected menu items into local storage
   useEffect(() => {
     if (selectedItems !== 0) {
       localStorage.setItem('item', JSON.stringify(selectedItems));
     }
 
   }, { selectedItems });
+
+  const mean = (x) => {
+    let sum = 0;
+    let count = 0
+    for (let n in x) {
+      count++;
+      sum = sum + x[n];
+    }
+    return Math.round(sum / sum)
+  }
 
   return (
     <>
@@ -44,7 +58,7 @@ const MenuItems = ({ items }) => {
 
                 <h2 className="card__title">{item.name}</h2>
                 <br></br>
-               
+
                 <Accordion.Header key={item.id}>Ingredients:</Accordion.Header>
                 <Accordion.Body>
                   <p style={{ textAlign: "center" }}>{item.ingredients}</p>
@@ -62,17 +76,27 @@ const MenuItems = ({ items }) => {
                 </div>
                 <br></br>
                 <div className="card_recipe">
-                <Accordion.Header key={item.id}>Recipe:</Accordion.Header>
+                  <Accordion.Header key={item.id}>Recipe:</Accordion.Header>
                   <Accordion.Body>
                     <p style={{ whiteSpace: 'pre-wrap', color: 'ivory' }}> {item.recipe}</p>
                   </Accordion.Body>
                 </div>
                 <div className="row">
                   <div className="col" style={{ justifyContent: "center" }}>
-                   <p style={{fontWeight: "bold"}}> {item.category}</p>
+                    <p style={{ fontWeight: "bold" }}> {item.category}</p>
                   </div>
                   <div className="col">
-                    <p style={{ color: "white", float: "right", fontStyle: "oblique" }}>£{item.price}</p>
+                    {/* <Typography component="legend">Read only</Typography> */}
+                    <Rating name="read-only" value={mean(item.rating)} style={{ float: "right" }} readOnly />
+                    {/* <Rating
+                      name="simple-controlled"
+                      value={mean(item.rating)}
+                      onChange={(event, newValue) => {
+                        setValue(newValue);
+                      }}
+                    /> */}
+                    <p style={{ color: "white", fontStyle: "oblique" }}>Rating: {mean(item.rating)}</p>
+
                   </div>
                 </div>
                 <br></br>

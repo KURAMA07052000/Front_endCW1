@@ -3,11 +3,13 @@ const menu = new menuDAO({ filename: "menu.db", autoload: true });
 const orderDAO = require("../models/ordersModel");
 const order = new orderDAO({ filename: "orders.db", autoload: true });
 
-
+//initialise using menuModel and create a new .db file
 exports.newList = function (req, res) {
   menu.init();
   res.redirect("/");
 };
+
+//list all the menus
 exports.listMenu = function (req, res) {
   menu.getAllEntries()
     .then((list) => {
@@ -18,6 +20,8 @@ exports.listMenu = function (req, res) {
       console.log("promise rejected", err);
     });
 };
+
+
 exports.listOrders = function (req, res) {
 order.getAllEntries()
     .then((list) => {
