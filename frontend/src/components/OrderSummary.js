@@ -22,17 +22,18 @@ export default function OrderSummary() {
       <Accordion>
         <div className="cards">
           {order.map((item, index) => (
-            <Accordion.Item eventKey={index} key={index} style={{border: "none", background: "none"}} >
+            <Accordion.Item eventKey={index} key={index} style={{ border: "none", background: "none" }} >
+              {/* Renders cards according to the item ID */}
               <div className="card card-2" key={item.id} >
 
                 <h2 className="card__title">{item.name}</h2>
                 <div className="card_description">
-                <br></br>
-                <p style={{ textAlign: "center", color: "white" }}>{item.ingredients}</p>
+                  <br></br>
+                  <p style={{ textAlign: "center", color: "white" }}>{item.ingredients}</p>
                 </div>
                 <br></br>
                 <div className="card_recipe">
-                <Accordion.Header key={item.id}>Recipe:</Accordion.Header>
+                  <Accordion.Header key={item.id}>Recipe:</Accordion.Header>
                   <Accordion.Body>
                     <p style={{ whiteSpace: 'pre-wrap', color: 'white' }}> {item.recipe}</p>
                   </Accordion.Body>
@@ -43,10 +44,9 @@ export default function OrderSummary() {
               </div>
             </Accordion.Item>
           ))}
-
         </div>
       </Accordion>
-      
+
     </>
   );
 }

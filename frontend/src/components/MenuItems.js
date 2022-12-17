@@ -51,67 +51,77 @@ const MenuItems = ({ items }) => {
     <>
 
 
-      <Accordion>
-        <div className="cards">
-          {items.map((item, index) => (
-            <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background: "none" }}>
-              <div className="card card-3" key={item.id} >
 
-                <h2 className="card__title">{item.name}</h2>
-                <br></br>
+      <div className="cards">
+        {/* Renders cards according to the item ID */}
+        {items.map((item, index) => (
 
+          <div className="card card-3" key={item.id} >
+
+            <h2 className="card__title">{item.name}</h2>
+            <br></br>
+            <Accordion>
+              <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background: "none" }}>
                 <Accordion.Header key={item.id}>Ingredients:</Accordion.Header>
                 <Accordion.Body>
                   <p style={{ textAlign: "center" }}>{item.ingredients}</p>
                 </Accordion.Body>
-
-                <br></br>
-                <div className="card_description">
-
+              </Accordion.Item>
+            </Accordion>
+            <br></br>
+            <div className="card_description">
+              <Accordion>
+                <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background: "none" }}>
                   <Accordion.Header key={item.id}>Nutritional Information:</Accordion.Header>
                   <Accordion.Body>
                     <p><FetchData query={item.name} /></p>
                   </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
 
-
-                </div>
-                <br></br>
-                <div className="card_recipe">
+            </div>
+            <br></br>
+            <div className="card_recipe">
+              <Accordion>
+                <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background: "none" }}>
                   <Accordion.Header key={item.id}>Recipe:</Accordion.Header>
                   <Accordion.Body>
                     <p style={{ whiteSpace: 'pre-wrap', color: 'ivory' }}> {item.recipe}</p>
                   </Accordion.Body>
-                </div>
-                <div className="row">
-                  <div className="col" style={{ justifyContent: "center" }}>
-                    <p style={{ fontWeight: "bold" }}> {item.category}</p>
-                  </div>
-                  <div className="col">
-                    {/* <Typography component="legend">Read only</Typography> */}
-                    <Rating name="read-only" value={mean(item.rating)} style={{ float: "right" }} readOnly /> {/* Displays the average of a rating */}
-                    {/* <Rating
+                </Accordion.Item>
+              </Accordion>
+            </div>
+            <div className="row">
+              <div className="col" style={{ justifyContent: "center" }}>
+                <p style={{ fontWeight: "bold" }}> {item.category}</p>
+              </div>
+              <div className="col">
+                {/* <Typography component="legend">Read only</Typography> */}
+                <Rating name="read-only" value={mean(item.rating)} style={{ float: "right" }} readOnly /> {/* Displays the average of a rating */}
+                {/* <Rating
                       name="simple-controlled"
                       value={mean(item.rating)}
                       onChange={(event, newValue) => {
                         setValue(newValue);
                       }}
                     /> */}
-                    <p style={{ color: "white", fontStyle: "oblique" }}>Rating: {mean(item.rating)}</p>
+                <p style={{ color: "white", fontStyle: "oblique" }}>Rating: {mean(item.rating)}</p>
 
-                  </div>
-                </div>
-                <br></br>
-                <p className="card__apply">
-                  <a className="card__link" onClick={(e) => handleClick(e, item)}>Add to Cart <i className="fas fa-arrow-right"></i></a>
-                </p>
               </div>
-            </Accordion.Item>
-          ))}
+            </div>
+            <br></br>
+            <p className="card__apply">
+              <a className="card__link" onClick={(e) => handleClick(e, item)}>Add to Cart <i className="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
 
-        </div>
-      </Accordion>
+        ))}
+
+      </div>
+
 
       <br></br>
+      {/* Renders selected items using OderSummary.js */}
       <div><OrderContext.Provider value={[selectedItems, setSelectedItems]}>
         <section ><div><OrderSummary /></div></section>
       </OrderContext.Provider></div>
