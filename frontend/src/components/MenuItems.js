@@ -99,17 +99,7 @@ const MenuItems = ({ items }) => {
               <div className="col">
 
                 <Ratings starRating={item}></Ratings>
-                {/* <Rating
-                  name="simple-controlled"
-                  value={mean(item.rating)}
-                  precision={0.5}
-                  style={{ float: "right" }}
-                  onChange={(event, newValue) => {
-                    setValue(newValue);
-                  }}
-                />
-                <p style={{ color: "white", fontStyle: "oblique" }}>Rating: {mean(item.rating)}/5</p>
- */}
+
               </div>
             </div>
             <br></br>
