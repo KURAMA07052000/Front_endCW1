@@ -39,3 +39,8 @@ exports.addOrder = function (req, res) {
   });
   res.redirect("/");
 };
+
+exports.updateRating = function (req, res) {
+  menu.updateRating(req.body.id, req.body.name, req.body.description, req.body.price, req.body._id, req.body.category, req.body.available ,req.body.ingredients, req.body.recipe, req.body.rating);
+  res.redirect('back');
+}

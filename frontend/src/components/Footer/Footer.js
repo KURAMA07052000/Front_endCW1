@@ -69,6 +69,7 @@ const Footer = () => {
           </Column>
         </Row>
       </Container>
+      <footer style={{textAlign: "center", color: "ivory"}}>&copy; Copyright 2022 Kevin Chika Urama</footer>
     </Box>
   );
 };

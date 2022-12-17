@@ -3,8 +3,9 @@ import FetchData from "./FetchNutrition";
 import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
 import Accordion from "react-bootstrap/Accordion";
-import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
+//import Rating from '@mui/material/Rating';
+//import Typography from '@mui/material/Typography';
+import Ratings from "./Ratings";
 import './card.css';
 
 
@@ -34,23 +35,23 @@ const MenuItems = ({ items }) => {
       localStorage.setItem('item', JSON.stringify(selectedItems));
     }
 
-  }, { selectedItems });
+  }, [selectedItems]);
 
   // calculates the average(mean)
   const mean = (x) => {
     let sum = 0;
-    let count = 0
+    let reccur = 0
     for (let n in x) {
-      count++;
+      reccur++;
       sum = sum + x[n];
     }
-    return Math.round(sum / sum)
+    return Math.round(sum / reccur)
   }
+
+  
 
   return (
     <>
-
-
 
       <div className="cards">
         {/* Renders cards according to the item ID */}
@@ -96,22 +97,24 @@ const MenuItems = ({ items }) => {
                 <p style={{ fontWeight: "bold" }}> {item.category}</p>
               </div>
               <div className="col">
-                {/* <Typography component="legend">Read only</Typography> */}
-                <Rating name="read-only" value={mean(item.rating)} style={{ float: "right" }} readOnly /> {/* Displays the average of a rating */}
-                {/* <Rating
-                      name="simple-controlled"
-                      value={mean(item.rating)}
-                      onChange={(event, newValue) => {
-                        setValue(newValue);
-                      }}
-                    /> */}
-                <p style={{ color: "white", fontStyle: "oblique" }}>Rating: {mean(item.rating)}</p>
 
+                <Ratings starRating={item}></Ratings>
+                {/* <Rating
+                  name="simple-controlled"
+                  value={mean(item.rating)}
+                  precision={0.5}
+                  style={{ float: "right" }}
+                  onChange={(event, newValue) => {
+                    setValue(newValue);
+                  }}
+                />
+                <p style={{ color: "white", fontStyle: "oblique" }}>Rating: {mean(item.rating)}/5</p>
+ */}
               </div>
             </div>
             <br></br>
             <p className="card__apply">
-              <a className="card__link" onClick={(e) => handleClick(e, item)}>Add to Cart <i className="fas fa-arrow-right"></i></a>
+              <a className="card__link" onClick={(e) => handleClick(e, item)}>Add to Cart<i className="fas fa-arrow-right"></i></a>
             </p>
           </div>
 

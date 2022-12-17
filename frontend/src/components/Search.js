@@ -114,7 +114,7 @@ function Search({ details }) {
             <div className="List"  /* style={{margin: "auto", width: "60%", paddingLeft: "130px"}} */ >
                 <div className="row" >
                     {/* displays of checboxes  */}
-                    <div className="col">
+                    <div className="col" style={{fontSize: "15px"}}>
                         <Checkbox
                             label="Drink"
                             value={checkedOne}
@@ -122,7 +122,7 @@ function Search({ details }) {
                         />
                     </div>
 
-                    <div className="col">
+                    <div className="col" style={{fontSize: "15px"}}>
                         <Checkbox
                             label="Side"
                             value={checkedTwo}
@@ -130,7 +130,7 @@ function Search({ details }) {
                         />
                     </div>
 
-                    <div className="col">
+                    <div className="col" style={{fontSize: "13px"}}>
                         <Checkbox
                             label="Snack"
                             value={checkedThree}
@@ -138,7 +138,7 @@ function Search({ details }) {
                         />
                     </div>
 
-                    <div className="col">
+                    <div className="col" style={{fontSize: "15px"}}>
                         <Checkbox
                             label="Main"
                             value={checkedFour}

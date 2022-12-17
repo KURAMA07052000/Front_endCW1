@@ -136,6 +136,7 @@ nav.fill ul li a:hover:after {
         align-items: center;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        opacity: 0;
     }
 
     .navcontent li {

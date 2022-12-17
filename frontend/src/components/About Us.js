@@ -27,7 +27,8 @@ export const AboutUs = () => {
                                             <i className="fa fa-pencil"></i>
                                             <h6>ACHIEVMENTS</h6>
                                             <hr></hr>
-                                            <p>Reaching many varieties of people worldwide</p>
+                                            <p>Reaching many varieties of people worldwide and teaching new ways of cooking</p>
+                                            
                                         </div>
                                     </div>
                                     <div className="col-md-4">
