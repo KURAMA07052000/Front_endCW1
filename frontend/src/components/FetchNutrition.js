@@ -16,7 +16,7 @@ const FetchData = ({ query }) => {
     protein_g: " ",
     carbohydrates_total_g: " ",
   });
-
+  // fetches nutritional data from the api
   const fetchData = useCallback(() => {
     const url =
       "https://calorieninjas.p.rapidapi.com/v1/nutrition?query=" + query;

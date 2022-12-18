@@ -54,8 +54,8 @@ body{
 }
 
 .about-item:hover {
-    background-color: #f73b7d;
-    background-image: linear-gradient(315deg, #292929 0%, #f73b7d 74%);
+    background: rgb(118,9,92);
+background: linear-gradient(32deg, rgba(118,9,92,1) 44%, rgba(242,61,144,1) 100%);
 }
 
 .about-item:hover i,

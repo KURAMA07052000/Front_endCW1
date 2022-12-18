@@ -12,6 +12,7 @@ const FetchData = () => {
     available: "",
   }]);
 
+  //fetches data from the already running backend
   const fetchData = useCallback(() => {
     const url = "http://localhost:3001/food";
     fetch(url)

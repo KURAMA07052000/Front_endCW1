@@ -22,6 +22,7 @@ class Menu {
       available: "no",
       ingredients: "230ml vegetable oil , 100g natural yogurt , 4 large eggs , 1 1/2 tsp vanilla extract , 1/2 orange zested , 265g self-raising flour , 335g light muscovado sugar , 2½ tsp ground cinnamon , ¼ fresh nutmeg , 265g carrots , 100g walnuts",
       rating: [3, 5, 2, 2, 2],
+      image: "",
     });
     this.menu.insert({
       id: "2",
@@ -32,6 +33,7 @@ class Menu {
       available: "no",
       ingredients: "2 slices of bread , 2 sices of ham , 1 tsp mayonaise , 2 slices chedder chesse, 1 leaf of lettuce",
       rating: [3, 5, 2, 2, 2],
+      image: "",
     });
     this.menu.insert({
       id: "3",
@@ -43,6 +45,7 @@ class Menu {
       ingredients: "1 tsp cumin seeds , 2 small sweet potatoes , 350 g broccoli , olive oil , 25 g cashew nuts , 25 g mixed pumpkin, sunflower and sesame seeds , 250 g vac-packed beetroot , 2 tbsp balsamic vinegar , 300 g quinoa , 30g fresh mint , 1 lemon , 1 ripe avocado , 6 tbsp natural yoghurt , 1 punnet of cress",
       recipe: "STEP 1 \n Pour the tamari into a large dish and stir in the curry powder, cumin, garlic and honey. Mix well. Slice the chicken breasts in half horizontally to make 4 fillets in total, then add to the marinade and mix well to coat. Set aside in the fridge for at least 1 hr, or overnight, to allow the flavours to penetrate the chicken.\n STEP 2 \n Meanwhile, mix the peanut butter with the chilli sauce, lime juice, and 1 tbsp water to make a spoonable sauce. When ready to cook the chicken, wipe a large non-stick frying pan with a little oil. Add the chicken and cook, covered with a lid, for 5-6 mins on a medium heat, turning the fillets over for the last min, until cooked but still moist. Set aside, covered, to rest for a few mins.\n STEP 3 \nWhile the chicken rests, toss the lettuce wedges with the cucumber, shallot, coriander and pomegranate, and pile onto plates. Spoon over a little sauce. Slice the chicken, pile on top of the salad and spoon over the remaining sauce.",
       rating: [1, 3, 2, 2, 1],
+      image: "",
     });
     this.menu.insert({
       id: "4",

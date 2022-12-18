@@ -3,8 +3,6 @@ import FetchData from "./FetchNutrition";
 import OrderContext from "./OrderContext";
 import OrderSummary from "./OrderSummary";
 import Accordion from "react-bootstrap/Accordion";
-//import Rating from '@mui/material/Rating';
-//import Typography from '@mui/material/Typography';
 import Ratings from "./Ratings";
 import './card.css';
 
@@ -37,18 +35,6 @@ const MenuItems = ({ items }) => {
 
   }, [selectedItems]);
 
-  // calculates the average(mean)
-  const mean = (x) => {
-    let sum = 0;
-    let reccur = 0
-    for (let n in x) {
-      reccur++;
-      sum = sum + x[n];
-    }
-    return Math.round(sum / reccur)
-  }
-
-  
 
   return (
     <>
@@ -57,15 +43,15 @@ const MenuItems = ({ items }) => {
         {/* Renders cards according to the item ID */}
         {items.map((item, index) => (
 
-          <div className="card card-3" key={item.id} >
-
-            <h2 className="card__title">{item.name}</h2>
+          <div className="card card-4" key={item.id} >
+            
+            <h2 className="card__title" style={{color: "black", fontWeight: "bold"}}>{item.name}</h2>
             <br></br>
             <Accordion>
-              <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background: "none" }}>
+              <Accordion.Item eventKey={index} key={index} style={{ border: "none", background: "none"}}>
                 <Accordion.Header key={item.id}>Ingredients:</Accordion.Header>
                 <Accordion.Body>
-                  <p style={{ textAlign: "center" }}>{item.ingredients}</p>
+                  <p style={{ textAlign: "center", backgroundColor: "rgba(255, 255, 255, 0.5)"}}>{item.ingredients}</p>
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -75,7 +61,7 @@ const MenuItems = ({ items }) => {
                 <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background: "none" }}>
                   <Accordion.Header key={item.id}>Nutritional Information:</Accordion.Header>
                   <Accordion.Body>
-                    <p><FetchData query={item.name} /></p>
+                    <p style={{backgroundColor: "rgba(255, 255, 255, 0.5)"}}><FetchData query={item.name} /></p>
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
@@ -87,14 +73,14 @@ const MenuItems = ({ items }) => {
                 <Accordion.Item eventKey={index} key={index} style={{ border: "none", backgroundColor: "", background: "none" }}>
                   <Accordion.Header key={item.id}>Recipe:</Accordion.Header>
                   <Accordion.Body>
-                    <p style={{ whiteSpace: 'pre-wrap', color: 'ivory' }}> {item.recipe}</p>
+                    <p style={{ whiteSpace: 'pre-wrap', color: 'ivory', backgroundColor: 'rgba(0, 0, 0, 0.5)', margin: '' }}> {item.recipe}</p>
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
             </div>
             <div className="row">
               <div className="col" style={{ justifyContent: "center" }}>
-                <p style={{ fontWeight: "bold" }}> {item.category}</p>
+                <p style={{ fontWeight: "bold"}}> {item.category}</p>
               </div>
               <div className="col">
 

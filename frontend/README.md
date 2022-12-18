@@ -37,7 +37,7 @@ Firstly clone the repository as follows
 
 4. The program sucessfully reads data from the back-end and can use the name to query the API for further data. This is reflected in the user cards system
 
-5. The rating system passes an array that is averaged on client side to show the mean of all th values within the array.
+5. The rating system passes an array that is averaged on client side to show the mean of all th values within the array. This also succesfully pases new entries to the bakend and in turn updates the data.
 
 6. The user can use checkboxes to filter the menu out in regards to category such as snack, lunch, drin and so on.
 

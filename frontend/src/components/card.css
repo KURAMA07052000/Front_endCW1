@@ -144,7 +144,7 @@ h2 {
 /* CARD BACKGROUNDS */
 
 .card-1 {
-    background: radial-gradient(#1fe4f5, #3fbafe);
+    background: url(https://img.freepik.com/free-vector/abstract-black-texture-background-hexagon_206725-413.jpg);
     border: none;
 }
 
@@ -161,9 +161,11 @@ h2 {
 }
 
 .card-4 {
-    background: radial-gradient(#60efbc, #58d5c9);
+    background: url(https://media.istockphoto.com/id/1151411469/photo/abstract-watercolor-background-hot-pink.jpg?s=612x612&w=0&k=20&c=iL0LebIUsLusFaeByY2usO98vyG4tdQs4ZjWgFK9Hpk=) ;
+    
     border: none;
-
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
 .card-5 {
@@ -194,7 +196,7 @@ h2 {
     padding: 10px;
     font-family: sans-serif;
     color: #fff;
-    background: #f73b7d;
+    background: #842579;
     border-radius: 100px;
     float: right;
     margin-right: 4%; 
@@ -205,7 +207,7 @@ h2 {
 }
 
 .top :hover{
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: #000000;
     transition: all 2s;
 }

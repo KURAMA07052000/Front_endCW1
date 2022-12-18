@@ -20,6 +20,8 @@ const Ratings= ({ starRating }) => {
     const [item, setItem] = useState(starRating);
     const [value, setValue] = useState();
 
+
+    // post new ratings to the route updateRating in the backend
     async function addRating() {
         await fetch(`http://localhost:3001/updateRating`, {
             method: "post",
@@ -36,6 +38,7 @@ const Ratings= ({ starRating }) => {
 
     return (
         <>
+        {/* show the rating and update onClick */}
             <Rating
                 name="simple-controlled"
                 value={value}
