@@ -23,7 +23,7 @@ exports.listMenu = function (req, res) {
 
 
 exports.listOrders = function (req, res) {
-order.getAllEntries()
+  order.getAllEntries()
     .then((list) => {
       res.json(list);
       //console.log(list);
@@ -40,7 +40,8 @@ exports.addOrder = function (req, res) {
   res.redirect("/");
 };
 
+//update rating
 exports.updateRating = function (req, res) {
-  menu.updateRating(req.body.id, req.body.name, req.body.description, req.body.price, req.body._id, req.body.category, req.body.available ,req.body.ingredients, req.body.recipe, req.body.rating);
+  menu.updateRating(req.body.id, req.body.name, req.body.description, req.body.price, req.body._id, req.body.category, req.body.available, req.body.ingredients, req.body.recipe, req.body.rating);
   res.redirect('back');
 }

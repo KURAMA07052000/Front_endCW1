@@ -187,6 +187,11 @@ h2 {
         width: 60%;
         padding-left: 0px;
     }
+
+    .searchBG {
+        background: url(https://img.freepik.com/premium-photo/blurred-background-group-chefs-cooking-kitchen_130291-4418.jpg?w=2000);
+        background-position-y: -200px;
+    }
 }
 
 /* backtotopbutton */
@@ -213,3 +218,7 @@ h2 {
 }
 /* end of button */
 
+.searchBG {
+    background: url(https://img.freepik.com/premium-photo/blurred-background-group-chefs-cooking-kitchen_130291-4418.jpg?w=2000);
+    background-position-y: -800px;
+}

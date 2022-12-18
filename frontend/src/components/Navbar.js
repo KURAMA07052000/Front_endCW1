@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <>
    {/*  Navigation system using id to scroll to particular section of the page */}
-      <section style={{ marginBottom: "3%" }}>
+      <section style={{}}>
         <nav class="fill">
           <div class="logo">
             <img class="welcomeimage" src={logo} width="100px" height="100px"></img>

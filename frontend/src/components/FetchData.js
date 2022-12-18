@@ -30,8 +30,7 @@ const FetchData = () => {
 
   return (
     <div>
-      <h2 id="Menu">Recipes</h2>
-      <br></br>
+      
      <Search details={foods} />
       {/* <MenuItems items={foods} /> */}
       
