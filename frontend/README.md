@@ -1,3 +1,5 @@
+please access the hosted site with the link: https://elaborate-mochi-393c83.netlify.app/
+
 
 Firstly clone the repository as follows
 
